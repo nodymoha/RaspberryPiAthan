@@ -4,10 +4,13 @@ import string
 import praytimes
 from datetime import date
 athan_sound = 'makkah.mp3'
+latitude = 00.00
+longitude = 00.00
+timezone = 0
 
 while (1):
 
-        tmm = praytimes.PrayTimes().getTimes(date.today(),[30.45,-84.25],-5)
+        tmm = praytimes.PrayTimes().getTimes(date.today(),[latitude,longitude],timezone)
         FAJR=tmm['fajr']
         DHUHR=tmm['dhuhr']
         ASR=tmm['asr']
